@@ -1,0 +1,6 @@
+curl -d "{ \"email\" : \"foo@bar\" }" -X POST http://localhost:9000/check -H "Content-type: application/json"
+curl -d "{ \"password\" : \"xxxxxxxx\" }" -X POST http://localhost:9001/check  -H "Content-type: application/json"
+curl -d "{ \"email\" : \"admin@test.com\", \"password\" : \"xxxxx\" }" -X POST http://localhost:9002/check -H "Content-type: application/json"
+curl -d "{ \"OTP KEY\" : "630017"}" -X POST http://localhost:9002/otp -H "Content-type: application/json"
+curl -d '{ "user_id" : 0, "email" : "admin@test.com", "newRole" : "admin" }' -X POST http://localhost:9003/addrole  -H "Content-type: application/json"
+curl -d '{ "user_id" : "id", "email" : "user_email", "delRole" : "role_to_delete" }' -X POST http://localhost:9003/removerole -H "Content-type: application/json"
