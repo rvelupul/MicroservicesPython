@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+     
+   emailcheck:
+     build: ./emailcheck
+     ports:
+     - "9000:9000"
+
+   passwordcheck:
+     build: ./passwordcheck
+     ports:
+     - "9001:9001"
+
+   authcheck:
+     build: ./authcheck
+     ports:
+     - "9002:9002"
+
+   rolebase:
+     build: ./rolesbased
+     ports:
+     - "9003:9003"
